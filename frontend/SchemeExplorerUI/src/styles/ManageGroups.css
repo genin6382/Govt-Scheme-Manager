@@ -1,0 +1,79 @@
+/* ManageGroups.css */
+
+.manage-groups-container {
+    padding: 40px;
+    background-color: #f7f9fc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+    margin-top: 50px;
+  }
+  
+  .manage-groups-container h2 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 24px;
+    font-weight: 600;
+  }
+  
+  .manage-groups-container input {
+    width: calc(100% - 120px);
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    outline: none;
+    transition: border-color 0.3s;
+  }
+  
+  .manage-groups-container input:focus {
+    border-color: #007bff;
+  }
+  
+  .manage-groups-container button {
+    padding: 12px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .manage-groups-container button:hover {
+    background-color: #0056b3;
+  }
+  
+  .manage-groups-container ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .manage-groups-container ul li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .manage-groups-container ul li button {
+    padding: 6px 10px;
+    font-size: 14px;
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .manage-groups-container ul li button:hover {
+    background-color: #c82333;
+  }
+  

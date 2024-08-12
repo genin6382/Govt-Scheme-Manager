@@ -1,0 +1,90 @@
+.feedback-section {
+    margin-top: 40px;
+    background-color: #1a1a1a;
+    border-radius: 16px;
+    padding: 20px;
+    color: white;
+  }
+  
+  .feedback-title {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .feedback-carousel {
+    display: flex;
+    overflow: hidden;
+    scroll-behavior: smooth;
+  }
+  
+  .feedback-card {
+    min-width: 300px;
+    flex-shrink: 0;
+    background-color: #333;
+    border-radius: 10px;
+    margin: 0 10px;
+    padding: 20px;
+    position: relative;
+  }
+  
+  .feedback-card img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+  }
+  
+  .feedback-card .feedback-content {
+    margin-top: 10px;
+  }
+  
+  .feedback-card .feedback-author {
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  .feedback-card .feedback-project {
+    color: #bbb;
+  }
+  
+  .feedback-nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .feedback-nav button {
+    background-color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  
+  .feedback-nav button:hover {
+    background-color: #ddd;
+  }
+  
+  .add-feedback-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .add-feedback-button:hover {
+    background-color: #005bb5;
+  }
+  
+  .feedback-form {
+    margin-top: 20px;
+  }
+  

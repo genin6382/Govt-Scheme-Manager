@@ -1,0 +1,139 @@
+:root {
+  --primary-color: #6200EE;
+  --primary-variant-color: #3700B3;
+  --secondary-color: #03DAC6;
+  --secondary-variant-color: #018786;
+  --background-color: #FFFFFF;
+  --surface-color: #FFFFFF;
+  --error-color: #B00020;
+  --on-primary-color: #FFFFFF;
+  --on-secondary-color: #000000;
+  --on-background-color: #000000;
+  --on-surface-color: #000000;
+  --on-error-color: #FFFFFF;
+  --font-family: 'Arial', sans-serif;
+  --font-size: 16px; /* Adjusted for better readability */
+  --heading-font-size: 24px; /* Adjusted for consistency */
+  --input-padding: 12px; /* Increased padding for better usability */
+  --input-font-size: 16px; /* Consistent with font-size */
+  --button-padding: 12px; /* Adjusted for consistency */
+  --button-font-size: 16px; /* Consistent with font-size */
+}
+
+[data-theme='dark'] {
+  --primary-color: wheat;
+  --primary-variant-color: wheat;
+  --secondary-color: #03DAC6;
+  --secondary-variant-color: #018786;
+  --background-color: #121212;
+  --surface-color: #1E1E1E;
+  --error-color: #CF6679;
+  --on-primary-color: #000000;
+  --on-secondary-color: #000000;
+  --on-background-color: #FFFFFF;
+  --on-surface-color: #FFFFFF;
+  --on-error-color: #000000;
+  --font-family: 'Arial', sans-serif;
+  --font-size: 16px;
+  --heading-font-size: 24px;
+  --input-padding: 12px;
+  --input-font-size: 16px;
+  --button-padding: 12px;
+  --button-font-size: 16px;
+}
+
+.application-form-container {
+  max-width: 600px;
+  width: 100%;
+  padding: 40px;
+  background-color: var(--surface-color);
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2); /* Softer shadow */
+  border-radius: 8px;
+  transition: background-color 0.3s, color 0.3s;
+  text-align: center;
+}
+
+.application-form-container h1 {
+  margin-bottom: 20px;
+  color: var(--primary-color);
+  font-size: var(--heading-font-size);
+  font-weight: bold;
+}
+
+.application-form-container .form-group {
+  margin-bottom: 20px;
+}
+
+.application-form-container .form-group label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: var(--primary-variant-color);
+  font-size: var(--font-size);
+}
+
+.application-form-container .form-group select,
+.application-form-container .form-group input[type="file"] {
+  width: 100%;
+  padding: var(--input-padding);
+  box-sizing: border-box;
+  border: 1px solid var(--primary-variant-color);
+  border-radius: 4px;
+  background-color: var(--surface-color);
+  color: var(--on-surface-color);
+  font-size: var(--input-font-size);
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.application-form-container .form-group input[type="file"] {
+  padding: 10px; /* Adjusted for better appearance */
+}
+
+.application-form-container .form-group input:focus,
+.application-form-container .form-group select:focus {
+  border-color: var(--secondary-color);
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(3, 218, 198, 0.3); /* Focus ring */
+}
+
+.application-form-container .submit-button {
+  display: block;
+  width: 100%;
+  padding: var(--button-padding);
+  background-color: var(--primary-color);
+  color: var(--on-primary-color);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: var(--button-font-size);
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.application-form-container .submit-button:hover {
+  background-color: var(--primary-variant-color);
+  transform: scale(1.05);
+}
+
+.application-form-container .error-messages {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: var(--error-color);
+  color: var(--on-error-color);
+  border: 1px solid var(--error-color);
+  border-radius: 4px;
+}
+
+.application-form-container .error-messages h2 {
+  margin-top: 0;
+  font-size: var(--heading-font-size);
+}
+
+.application-form-container .error-messages ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.application-form-container .error-messages ul li {
+  margin-bottom: 8px; /* Slightly increased margin */
+  font-size: var(--font-size);
+}

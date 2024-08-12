@@ -1,0 +1,119 @@
+.feedback-carousel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 10px 0;
+}
+
+.feedback-card {
+  min-width: 300px;
+  flex-shrink: 0;
+  background-color: #333;
+  border-radius: 10px;
+  margin: 0;
+  color: #fff;
+  padding: 1rem; 
+  position: relative; 
+}
+
+.feedback-card img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  margin-bottom: 10px;
+}
+
+.feedback-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.feedback-content blockquote {
+  font-size: 1.2em;
+  margin: 0 0 10px;
+  white-space: normal; 
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+  word-wrap: break-word; 
+  max-width: 100%; 
+}
+
+.feedback-author {
+  font-size: 0.9em;
+  color: #ccc;
+}
+
+.feedback-actions {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  gap: 5px;
+}
+
+.feedback-actions button {
+  background-color: #555;
+  border: none;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.feedback-actions button:hover {
+  background-color: #777;
+}
+
+textarea {
+  width: 100%;
+  height: 80px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #222;
+  color: #fff;
+}
+
+textarea:focus {
+  outline: none;
+  border-color: #555;
+}
+
+button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+.flex-container {
+  display: flex;
+  gap: 2rem;
+}
+
+.carousel-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.carousel-buttons button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.carousel-buttons button:hover {
+  background-color: #555;
+}

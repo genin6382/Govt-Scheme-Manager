@@ -1,0 +1,155 @@
+/* profile.css */
+
+:root {
+  --profile-bg: #ffffff;
+  --profile-text-color: #333;
+  --profile-border-color: #ddd;
+  --profile-link-color: #007bff;
+  --profile-link-hover-color: #0056b3;
+  --profile-success-bg: #d4edda;
+  --profile-success-text: #155724;
+  --profile-success-border: #c3e6cb;
+  --profile-error-bg: #f8d7da;
+  --profile-error-text: #721c24;
+  --profile-error-border: #f5c6cb;
+  --profile-button-bg: #12ae33;
+  --profile-button-hover-bg: #0a9d24;
+  --delete-button-bg: #dc3545;
+  --delete-button-hover-bg: #c82333;
+  --box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  --profile-title-gradient: linear-gradient(90deg, #007bff, #0056b3);
+  --font-family-primary: 'Arial, sans-serif';
+  --font-family-secondary: 'Courier New, monospace';
+}
+
+[data-theme='dark'] {
+  --profile-bg: #1e1e1e;
+  --profile-text-color: #e0e0e0;
+  --profile-border-color: #444;
+  --profile-link-color: #bb86fc;
+  --profile-link-hover-color: #9a67ea;
+  --profile-success-bg: #2d3e2d;
+  --profile-success-text: #c3e6cb;
+  --profile-success-border: #3e4e3e;
+  --profile-error-bg: #5a2a2a;
+  --profile-error-text: #f5c6cb;
+  --profile-error-border: #7a3a3a;
+  --profile-button-bg: #0a9d24;
+  --profile-button-hover-bg: #06731b;
+  --delete-button-bg: #b82a34;
+  --delete-button-hover-bg: #932123;
+  --box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+  --profile-title-gradient: linear-gradient(90deg, #bb86fc, #9a67ea);
+}
+
+body {
+  font-family: var(--font-family-primary);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.profile-container {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: var(--profile-bg);
+  color: var(--profile-text-color);
+  border-radius: 16px;
+  box-shadow: var(--box-shadow);
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+.back-link {
+  display: block;
+  margin-bottom: 20px;
+  color: var(--profile-link-color);
+  text-decoration: none;
+  font-size: large;
+  font-family: var(--font-family-secondary);
+}
+
+.back-link:hover {
+  text-decoration: underline;
+  color: var(--profile-link-hover-color);
+}
+
+.success-message, .error-message {
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  font-family: var(--font-family-secondary);
+}
+
+.success-message {
+  background-color: var(--profile-success-bg);
+  color: var(--profile-success-text);
+  border: 1px solid var(--profile-success-border);
+}
+
+.error-message {
+  background-color: var(--profile-error-bg);
+  color: var(--profile-error-text);
+  border: 1px solid var(--profile-error-border);
+}
+
+.profile-card {
+  background-color: var(--profile-bg);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: var(--box-shadow);
+}
+
+.profile-card h2 {
+  font-size: 32px;
+  background: var(--profile-title-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  font-weight: bold;
+  font-family: var(--font-family-secondary);
+}
+
+.profile-form label {
+  display: block;
+  margin-bottom: 10px;
+  font-family: var(--font-family-primary);
+}
+
+.profile-form input, .profile-form select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid var(--profile-border-color);
+  border-radius: 4px;
+}
+
+.profile-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.profile-buttons button, .profile-buttons .delete-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  font-family: var(--font-family-primary);
+  flex: 0 0 15%; /* Adjust the width of the buttons */
+}
+
+.profile-buttons button {
+  background-color: var(--profile-button-bg);
+}
+
+.profile-buttons .delete-button {
+  background-color: var(--delete-button-bg);
+}
+
+.profile-buttons button:hover {
+  background-color: var(--profile-button-hover-bg);
+}
+
+.profile-buttons .delete-button:hover {
+  background-color: var(--delete-button-hover-bg);
+}

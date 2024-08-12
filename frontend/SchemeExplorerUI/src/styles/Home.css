@@ -1,0 +1,187 @@
+/* Light Mode Variables */
+:root {
+  --bg-color: #f7f9fc;
+  --text-color: #333;
+  --header-color: #0056b3;
+  --button-bg-color: #1a73e8;
+  --button-text-color: #fff;
+  --button-hover-bg-color: #0056b3;
+  --scheme-list-bg: #ffffff;
+  --scheme-list-text: #333;
+  --scheme-list-hover-bg: #f1f3f5;
+  --box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  --scheme-list-title-gradient: linear-gradient(90deg, #007bff, #0056b3);
+}
+
+/* Dark Mode Variables */
+[data-theme='dark'] {
+  --bg-color: #121212;
+  --text-color: #e0e0e0;
+  --header-color: #bb86fc;
+  --button-bg-color: #bb86fc;
+  --button-text-color: #121212;
+  --button-hover-bg-color: #9a67ea;
+  --scheme-list-bg: #1e1e1e;
+  --scheme-list-text: #e0e0e0;
+  --scheme-list-hover-bg: #333333;
+  --box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  --scheme-list-title-gradient: linear-gradient(90deg, #bb86fc, #9a67ea);
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  background-color: var(--scheme-list-bg);
+  color: var(--text-color);
+  border-radius: 16px;
+  box-shadow: var(--box-shadow);
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 50px;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.toggle-mode {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: var(--header-color);
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.logout-button, .theme-toggle-button {
+  margin-top: 20px;
+  padding: 12px 20px;
+  font-size: 16px;
+  background-color: var(--button-bg-color);
+  color: var(--button-text-color);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.logout-button:hover, .theme-toggle-button:hover {
+  background-color: var(--button-hover-bg-color);
+  transform: scale(1.05);
+}
+
+.scheme-list {
+  width: 100%;
+  background-color: var(--scheme-list-bg);
+  color: var(--scheme-list-text);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: var(--box-shadow);
+  margin-top: 20px;
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+.scheme-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.scheme-list li {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--scheme-list-hover-bg);
+  transition: background-color 0.3s;
+}
+
+.scheme-list li:last-child {
+  border-bottom: none;
+}
+
+.scheme-list a {
+  color: inherit;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.scheme-list a:hover {
+  text-decoration: underline;
+  color: var(--scheme-list-link-hover-color);
+}
+
+.scheme-list li:hover {
+  background-color: var(--scheme-list-hover-bg);
+  transform: scale(1.02);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.scheme-list-title {
+  font-size: 32px;
+  margin-bottom: 20px;
+  background: var(--scheme-list-title-gradient);
+  background-clip: text; /* Standard syntax */
+  -webkit-background-clip: text; /* Safari and older versions of Chrome */
+  -webkit-text-fill-color: transparent; /* Safari and older versions of Chrome */
+  text-align: center;
+  font-weight: bold;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.scheme-list-item {
+  margin-bottom: 15px;
+  padding: 10px;
+  border-bottom: 1px solid var(--scheme-list-border-color);
+  transition: background-color 0.3s, transform 0.3s;
+  animation: fadeIn 0.5s ease-in-out both;
+}
+
+.no-schemes {
+  color: var(--no-schemes-text-color);
+  font-style: italic;
+  text-align: center;
+  padding: 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.profile-button {
+  position: absolute;
+  top: 17px;
+  left: 10px;
+  margin: 10px;
+  padding: 12px 20px;
+  font-size: 16px;
+  background-color: var(--button-bg-color);
+  color: var(--button-text-color);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.profile-button:hover {
+  background-color: var(--button-hover-bg-color);
+  transform: scale(1.05);
+}

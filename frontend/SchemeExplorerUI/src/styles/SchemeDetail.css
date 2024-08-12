@@ -1,0 +1,116 @@
+/* Light Mode Variables */
+:root {
+  --scheme-detail-bg: #ffffff;
+  --scheme-detail-text: #333;
+  --scheme-title-color: #0056b3;
+  --scheme-summary-color: #555;
+  --scheme-section-title-color: #333;
+  --scheme-list-text-color: #444;
+  --scheme-list-bullet-color: #0056b3;
+  --loading-text-color: #888;
+  --box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Dark Mode Variables */
+[data-theme='dark'] {
+  --scheme-detail-bg: #1e1e1e;
+  --scheme-detail-text: #e0e0e0;
+  --scheme-title-color: #bb86fc;
+  --scheme-summary-color: #cccccc;
+  --scheme-section-title-color: #bb86fc;
+  --scheme-list-text-color: #e0e0e0;
+  --scheme-list-bullet-color: #bb86fc;
+  --loading-text-color: #bbbbbb;
+  --box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+
+.scheme-detail-container {
+  padding: 40px;
+  max-width: 900px;
+  margin: 30px auto;
+  background-color: var(--scheme-detail-bg);
+  color: var(--scheme-detail-text);
+  border-radius: 12px;
+  box-shadow: var(--box-shadow);
+  transition: background-color 0.3s, color 0.3s, transform 0.3s;
+  transform: translateY(0);
+}
+
+.scheme-detail-container:hover {
+  transform: translateY(-5px);
+}
+
+.scheme-title {
+  font-size: 38px;
+  margin-bottom: 30px;
+  color: var(--scheme-title-color);
+  text-align: center;
+  font-weight: bold;
+}
+
+.scheme-summary {
+  font-size: 22px;
+  margin-bottom: 30px;
+  color: var(--scheme-summary-color);
+  text-align: justify;
+}
+
+.scheme-section {
+  margin-bottom: 30px;
+}
+
+.scheme-details h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: var(--scheme-section-title-color);
+  border-bottom: 3px solid var(--scheme-section-title-color);
+  padding-bottom: 10px;
+}
+
+.scheme-list {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+  line-height: 1.6;
+}
+
+.scheme-list li {
+  font-size: 20px;
+  margin: 10px 0;
+  padding-left: 30px;
+  position: relative;
+  color: var(--scheme-list-text-color);
+}
+
+.scheme-list li:before {
+  content: "▹";
+  position: absolute;
+  left: 0;
+  color: var(--scheme-list-bullet-color);
+  font-size: 1.5em;
+  top: -3px;
+}
+
+
+.loading,
+.error {
+  font-size: 24px;
+  text-align: center;
+  margin-top: 50px;
+  color: var(--loading-text-color);
+}
+
+
+.feedback-button{
+  margin-left:5%;
+  background-color: rgb(20, 209, 20);
+}
+
+.feedback-button:hover{
+  background-color: darkgreen;
+}
+.scheme-manager-actions{
+  background-color: rgb(42, 158, 42);
+  margin-bottom:1rem;
+}

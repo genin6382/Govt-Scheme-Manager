@@ -1,0 +1,89 @@
+:root {
+  --scheme-list-bg: #ffffff;
+  --scheme-list-text-color: #333;
+  --scheme-list-border-color: #ddd;
+  --scheme-list-link-color: #007bff;
+  --scheme-list-link-hover-color: #0056b3;
+  --no-schemes-text-color: #888;
+  --box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  --scheme-list-title-gradient: linear-gradient(90deg, #007bff, #0056b3);
+}
+
+[data-theme='dark'] {
+  --scheme-list-bg: #1e1e1e;
+  --scheme-list-text-color: #e0e0e0;
+  --scheme-list-border-color: #444;
+  --scheme-list-link-color: #bb86fc;
+  --scheme-list-link-hover-color: #9a67ea;
+  --no-schemes-text-color: #bbbbbb;
+  --box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+  --scheme-list-title-gradient: linear-gradient(90deg, #bb86fc, #9a67ea);
+}
+
+.scheme-list-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--scheme-list-bg);
+  padding: 20px;
+  transition: background-color 0.3s;
+}
+
+.scheme-list {
+  padding: 20px;
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+  background-color: var(--scheme-list-bg);
+  color: var(--scheme-list-text-color);
+  border-radius: 16px;
+  box-shadow: var(--box-shadow);
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+}
+.scheme-list-title {
+  font-size: 32px;
+  margin-bottom: 20px;
+  background: var(--scheme-list-title-gradient);
+  background-clip: text; /* Standard syntax */
+  -webkit-background-clip: text; /* Safari and older versions of Chrome */
+  -webkit-text-fill-color: transparent; /* Safari and older versions of Chrome */
+  text-align: center;
+  font-weight: bold;
+}
+
+.scheme-list-ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.scheme-list-item {
+  margin-bottom: 15px;
+  padding: 10px;
+  border-bottom: 1px solid var(--scheme-list-border-color);
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.scheme-list-item:hover {
+  background-color: var(--scheme-list-link-hover-color);
+  transform: scale(1.02);
+}
+
+.scheme-list-link {
+  text-decoration: none;
+  color: var(--scheme-list-link-color);
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.scheme-list-link:hover {
+  text-decoration: underline;
+  color: var(--scheme-list-link-hover-color);
+}
+
+.no-schemes {
+  color: var(--no-schemes-text-color);
+  font-style: italic;
+  text-align: center;
+  padding: 20px;
+}

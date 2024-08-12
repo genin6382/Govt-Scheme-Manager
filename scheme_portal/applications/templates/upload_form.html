@@ -1,0 +1,25 @@
+<!-- templates/application_form.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload Application</title>
+</head>
+<body>
+    <h1>Upload Application Form</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <label for="scheme">Scheme:</label>
+        <select name="scheme" id="scheme">
+            {% for scheme in schemes %}
+                <option value="{{ scheme.id }}">{{ scheme.scheme_name }}</option>
+            {% endfor %}
+        </select>
+        <br><br>
+        <label for="documents">Upload Documents:</label>
+        <input type="file" name="documents" multiple>
+        <br><br>
+        <button type="submit">Submit</button>
+    </form>
+    
+</body>
+</html>
