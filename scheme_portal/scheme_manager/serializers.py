@@ -14,6 +14,11 @@ class SchemeSerializer(serializers.ModelSerializer):
             return False
         return request.user.groups.filter(name='SchemeManager').exists()
     
+class EligibleSchemeSerializer(serializers.ModelSerializer):
+    class Meta:
+        model=Scheme
+        fields=['id','scheme_name']
+
 class FeedBackSerializer(serializers.ModelSerializer):
     username=serializers.CharField(source='user.username',read_only=True)
     gender=serializers.SerializerMethodField()

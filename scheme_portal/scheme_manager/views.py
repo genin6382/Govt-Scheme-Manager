@@ -1,6 +1,6 @@
 from rest_framework import generics
 from .models import Scheme,Feedback
-from .serializers import SchemeSerializer,FeedBackSerializer,FeedBackdetailSerializer
+from .serializers import SchemeSerializer,FeedBackSerializer,FeedBackdetailSerializer,EligibleSchemeSerializer
 from rest_framework.permissions import IsAuthenticated
 from .permissions import IsSchemeManager,CanGiveFeedback,CanModifyFeedback
 from rest_framework.permissions import SAFE_METHODS
@@ -8,6 +8,7 @@ from django.conf import settings
 from django.core.mail import send_mail
 from django.contrib.auth.models import User
 from rest_framework.response import Response
+from users.models import UserProfile
 
 class SchemeList(generics.ListCreateAPIView):
     queryset = Scheme.objects.all().order_by('id')
@@ -103,6 +104,33 @@ class SchemeDetail(generics.RetrieveUpdateDestroyAPIView):
         return self.update(request, *args, **kwargs)
 
 
+class EligibleSchemeList(generics.ListAPIView):
+    permission_classes = [IsAuthenticated]
+    serializer_class = EligibleSchemeSerializer 
+
+    def get_queryset(self):
+        user = UserProfile.objects.get(user=self.request.user)
+        schemes = Scheme.objects.all()
+        eligible_schemes = []
+
+        for scheme in schemes:
+            if scheme.beneficiary_state != ['All'] and user.recidence_state not in scheme.beneficiary_state:
+                continue
+            if scheme.caste != ['All'] and user.caste not in scheme.caste:
+                continue
+            if user.age > scheme.age.get('general', {}).get('lte', float('inf')) or user.age < scheme.age.get('general', {}).get('gte', 0):
+                continue
+            if scheme.is_bpl and not user.is_bpl:
+                continue
+            if scheme.is_student != user.is_student:
+                continue
+            if scheme.disability and not user.is_disabled:
+                continue
+            if scheme.marital_status != ['All'] and user.marital_status not in scheme.marital_status:
+                continue
+            eligible_schemes.append(scheme)
+        return eligible_schemes
+    
 class FeedbackView(generics.ListCreateAPIView):
     serializer_class=FeedBackSerializer
 
@@ -169,3 +197,6 @@ class CanGiveFeedbackView(generics.RetrieveAPIView):
             
         else:
             return Response({'can_feedback':True})
+
+
+           

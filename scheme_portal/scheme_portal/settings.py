@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-!dorx74nr7i5$)2e&92%@mp40=%r!)4clet1$zxr&^uhgg+mp@
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['0.0.0.0', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
@@ -85,11 +85,11 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'govt_scheme',
-        'USER':'root',
-        'PASSWORD':'vidhu$12',
-        'HOST':'127.0.0.1',
-        'PORT':'3306',
-
+        'USER': 'root',
+        'PASSWORD': 'vidhu$12',
+        # 'HOST': 'mysql-db', #for docker
+        'HOST': 'localhost',
+        'PORT': '3306',
     }
 }
 
@@ -167,7 +167,7 @@ EMAIL_HOST_USER = 'adjango387@gmail.com'
 EMAIL_HOST_PASSWORD = 'hxvf qrrp vasr yhqj'
 
 
-# CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOW_ALL_ORIGINS = True
 
 CORS_ALLOW_METHODS=[
     'DELETE',
@@ -178,9 +178,9 @@ CORS_ALLOW_METHODS=[
     'PUT',
 ]
 
-CORS_ORIGIN_WHITELIST = [
-'http://localhost:3000'
-]
+# CORS_ORIGIN_WHITELIST = [
+# 'http://localhost:3000'
+# ]
 
 CORS_ALLOW_CREDENTIALS = True
 
