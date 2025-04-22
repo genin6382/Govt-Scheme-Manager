@@ -2,7 +2,6 @@
 
 An intelligent, user-focused platform that personalizes the discovery and application of government schemes based on individual profiles. Built with **Django (Python)**, **React.js**, and **MySQL**, this system empowers users to find, assess, and apply for government programs they’re eligible for—while enabling administrators to manage schemes and application workflows.
 
-
 ---
 
 ## 🚀 Features
@@ -28,8 +27,38 @@ An intelligent, user-focused platform that personalizes the discovery and applic
 | Frontend     | React.js                            |
 | Backend      | Django (Python)                     |
 | Database     | MySQL                               |
-| Auth         | Django Auth,                        |
+| Auth         | Django Auth                         |
 | Email Service| Django Email Backend (SMTP)         |
+
+---
+
+## 🖼️ Screenshots
+
+### 🧭 User Workflow
+
+| Login Page | Register Page |
+|------------|---------------|
+| <img src="./attachments/PHOTO-2024-11-07-12-30-55.jpg" width="400"/> | <img src="./attachments/PHOTO-2024-11-07-12-29-52.jpg" width="400"/> |
+
+| Profile Page | Home Page |
+|--------------|-----------|
+| <img src="./attachments/PHOTO-2024-11-07-12-30-01.jpg" width="400"/> | <img src="./attachments/PHOTO-2024-11-07-12-30-01_1.jpg" width="400"/> |
+
+| Scheme Details | Submit Feedback |
+|----------------|-----------------|
+| <img src="./attachments/PHOTO-2024-11-07-12-32-29.jpg" width="400"/> | <img src="./attachments/PHOTO-2024-11-07-12-32-52.jpg" width="400"/> |
+
+| Apply to Scheme |
+|-----------------|
+| <img src="./attachments/PHOTO-2024-11-07-12-34-15.jpg" width="400"/> |
+
+---
+
+### 🛡️ Admin Panel
+
+| Manage Applications |
+|---------------------|
+| <img src="./attachments/PHOTO-2024-11-07-12-34-22.jpg" width="400"/> |
 
 ---
 
@@ -65,4 +94,4 @@ npm run dev
 ## ⭐ Why This Project?
 
 This project was developed to bridge the gap between citizens and the myriad of government assistance programs. With complex eligibility and scattered access points, many individuals miss out on schemes they truly qualify for. This portal changes that.
-
+```
