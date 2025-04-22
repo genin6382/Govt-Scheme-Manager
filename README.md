@@ -1,5 +1,3 @@
-
-```markdown
 # Government Scheme Management System
 
 An intelligent, user-focused platform that personalizes the discovery and application of government schemes based on individual profiles. Built with **Django (Python)**, **React.js**, and **MySQL**, this system empowers users to find, assess, and apply for government programs they’re eligible for—while enabling administrators to manage schemes and application workflows.
